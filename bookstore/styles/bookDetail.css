@@ -1,0 +1,66 @@
+.book {
+
+   display: flex;
+
+   border: 1px solid #ccc;
+
+    padding: 1rem;
+
+    margin: 1rem;
+
+    text-align: center;
+
+}
+
+.book-img {
+
+      min-width: 30%;
+
+      max-width: 30%;
+
+
+    }
+
+.book-detail-img {
+
+width: 100%;
+
+}
+
+ 
+
+   .book-detail {
+
+      margin-left: 50px;
+
+   }
+
+ 
+
+button {
+
+    background-color: #23388a;
+
+    border-radius: 7px;
+
+    color: #fff;
+
+    border: none;
+
+    padding: 0.5rem 1rem;
+
+    cursor: pointer;
+
+}
+
+ 
+
+button:hover {
+
+    background-color: #0056b3;
+
+}
+
+ 
+
+//media query for small screens

@@ -1,0 +1,247 @@
+body {
+
+    font-family: Arial, sans-serif;
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+header {
+
+    background-color: #540f66;
+
+    color: #fff;
+
+    padding: 1rem;
+
+}
+
+nav {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.imageTag {
+
+              width: 60px;      
+
+    }    
+
+.nav-links {
+
+    list-style: none;
+
+    display: flex;
+
+}
+
+.nav-links li {
+
+    margin-left: 1rem;
+
+}
+
+.nav-links a {
+
+    color: #fff;
+
+    text-decoration: none;
+
+}
+
+.book-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+
+    padding: 1rem;
+
+}
+
+.book-item {
+
+    border: 1px solid #ccc;
+
+    padding: 1rem;
+
+    margin: 1rem;
+
+    width: 200px;
+
+    text-align: center;
+
+}
+
+.book-item img {
+
+    width: 100%;
+
+    height: auto;
+
+}
+
+.book-item h2 {
+
+    font-size: 1.2rem;
+
+}
+
+.book-item p {
+
+    font-size: 0.9rem;
+
+}
+
+.book-item a {
+
+    color: #007bff;
+
+    text-decoration: none;
+
+}
+
+.cart {
+
+    padding: 1rem;
+
+}
+
+.cart-item {
+
+    border: 1px solid #ccc;
+
+    padding: 1rem;
+
+    margin: 1rem;
+
+    text-align: center;
+
+}
+
+.cart-item img {
+
+    width: 100px;
+
+    height: auto;
+
+}
+
+.cart-item h2 {
+
+    font-size: 1.2rem;
+
+}
+
+.cart-item p {
+
+    font-size: 1rem;
+
+}
+
+.cart-item button {
+
+    background-color: #dc3545;
+
+    color: #fff;
+
+    border: none;
+
+    padding: 0.5rem 1rem;
+
+    cursor: pointer;
+
+}
+
+.cart-item button:hover {
+
+    background-color: #c82333;
+
+}
+
+form {
+
+    margin: 2rem 0;
+
+}
+
+label {
+
+    display: block;
+
+    margin-bottom: 0.5rem;
+
+}
+
+input {
+
+    width: 100%;
+
+    padding: 0.5rem;
+
+    margin-bottom: 1rem;
+
+}
+
+button[type="submit"] {
+
+    background-color: #28a745;
+
+    color: #fff;
+
+    border: none;
+
+    padding: 0.5rem 1rem;
+
+    cursor: pointer;
+
+}
+
+button[type="submit"]:hover {
+
+    background-color: #218838;
+
+}
+
+footer {
+
+    background-color: #540f66;
+
+    color: #fff;
+
+    padding: 1rem;
+
+    text-align: center;
+
+}
+
+footer .quick-links,
+
+footer .social-media,
+
+footer .contact-info {
+
+    margin-bottom: 1rem;
+
+}
+
+footer a {
+
+    color: #fff;
+
+    text-decoration: none;
+
+    margin: 0 0.5rem;
+
+}

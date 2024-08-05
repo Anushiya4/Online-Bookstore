@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping Cart</title>
+
+    <link rel="stylesheet" href="styles/bookstore.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+
+                             <img class="imageTag" src="images/bookStoreLogo.jpg" alt="Bookstore">
+
+                  </div>
+
+            <ul class="nav-links">
+
+                <li><a href="homePage.html">Home</a></li>
+
+                <li><a href="cartPage.html">Shopping Cart</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div class="cart">
+
+            <div id="cart-items"></div>
+
+            <p>Total Price: Rs.<span id="total-price">0.00</span></p>
+
+            <form onsubmit="completePurchase(event)">
+
+                <label for="name">Name:</label>
+
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Complete Purchase</button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="quick-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="contact.html">Contact Us</a>
+
+            <a href="about.html">About Us</a>
+
+        </div>
+
+        <div class="social-media">
+
+            <a href=https://facebook.com>Facebook</a>
+
+            <a href=https://twitter.com>Twitter</a>
+
+            <a href=https://instagram.com>Instagram</a>
+
+        </div>
+
+        <div class="contact-info">
+
+            <p>Email: info@bookstore.com</p>
+
+            <p>Phone: +123456789</p>
+
+        </div>
+
+        <div class="copyright">
+
+            <p>&copy; 2024 Bookstore. All rights reserved.</p>
+
+        </div>
+
+    </footer>
+
+    <script src="scripts/main.js"></script>
+
+    <script>
+
+        function loadCart() {
+
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+            const cartItemsContainer = document.getElementById('cart-items');
+
+            const totalPriceElement = document.getElementById('total-price');
+
+            let totalPrice = 0;
+
+            cartItems.forEach((book, index) => {
+
+                const cartDiv = document.createElement('div');
+
+                cartDiv.classList.add('cart-item');
+
+                cartDiv.innerHTML = `
+
+                    <img src="images/${book.img}" alt="${book.title}">
+
+                    <h2>${book.title}</h2>
+
+                    <p>${book.description}</p>
+
+                    <p><strong>Price:</strong> Rs.${book.price.toFixed(2)}</p>
+
+                    <button onclick="removeFromCart(${index})">Remove</button>
+
+                `;
+
+                cartItemsContainer.appendChild(cartDiv);
+
+                totalPrice += book.price;
+
+            });
+
+            totalPriceElement.innerText = totalPrice.toFixed(2);
+
+        }
+
+        function removeFromCart(index) {
+
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+            cartItems.splice(index, 1);
+
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+            location.reload();
+
+        }
+
+        function completePurchase(event) {
+
+            event.preventDefault();
+
+            localStorage.setItem('cartItems', JSON.stringify([]));
+
+            alert('Purchase completed!');
+
+            location.reload();
+
+        }
+
+        window.onload = loadCart;
+
+    </script>
+
+</body>
+
+</html>
